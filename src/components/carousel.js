@@ -17,7 +17,7 @@ function AutoCarousel() {
       <Carousel.Item interval={500}>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          src="https://tryhardguides.com/wp-content/uploads/2022/04/featured-spy-x-family-anime-poster-781x439.jpg"
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -28,7 +28,7 @@ function AutoCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          src="https://images7.alphacoders.com/118/1184491.jpg"
           alt="Third slide"
         />
         <Carousel.Caption>
