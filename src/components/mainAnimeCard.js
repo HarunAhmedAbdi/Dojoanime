@@ -1,64 +1,59 @@
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import '../Styles/mainAnimeCard.scss';
 
+function setDefault(d) {
+  if (d == null) {
+      return (d = "--");
+  } else {
+      return d;
+  }
+}
 
-function MainAnimeCard() {
+function formatUrl(url) {
+  const newUrl = url.replaceAll(" ", "_");
+  return newUrl;
+}
+
+function MainAnimeCard({
+  airing_start,
+   genres,
+   images,
+   mal_id,
+   score,
+   title,
+   synopsis,
+   episodes,
+   url,
+   season,
+   rank,
+}) {
   return (
-    <CardGroup>
-        <Card>
-        <Card.Img variant="top" roundedCircle="true" src="https://cdn.shopify.com/s/files/1/1338/0845/files/SailorMoon_collection_desktop.jpg?v=1582333909" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="https://cdn.shopify.com/s/files/1/1338/0845/files/SailorMoon_collection_desktop.jpg?v=1582333909" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="https://cdn.animenewsnetwork.com/thumbnails/max700x700/cms/news.2/147637/001_size8.jpg" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
+      <div className="clash-card barbarian">
+        <div className="clash-card__image clash-card__image--barbarian">
+          <img src={images.webp.image_url} alt="barbarian" />
+        </div>
+        <div className="clash-card__level clash-card__level--barbarian">{season}</div>
+        <div className="clash-card__unit-name">{title}</div>
+        <div className="clash-card__unit-description">{synopsis}</div>
+  
+        <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+          <div className="one-third">
+            <div className="stat">{setDefault(episodes)}</div>
+            <div className="stat-value">Episodes</div>
+          </div>
+  
+          <div className="one-third">
+            <div className="stat">{setDefault(score)}</div>
+            <div className="stat-value">Score</div>
+          </div>
+  
+          <div className="one-third no-border">
+            <div className="stat">{setDefault(rank)}</div>
+            <div className="stat-value">Rank</div>
+          </div>
+        </div>
+      </div>
   );
 }
 

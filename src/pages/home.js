@@ -1,8 +1,13 @@
 import React from "react";
+import MainAnimeCard from "../components/mainAnimeCard";
+import AutoCarousel from "../components/carousel";
+
 
 function Home(props) {
     return (
-        <h1>Hello</h1>
+        <div>
+        <AutoCarousel />
+        </div>
     )
 }
 

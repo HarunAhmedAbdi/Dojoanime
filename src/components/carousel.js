@@ -1,8 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
-
+import '../Styles/carousel.scss';
 function AutoCarousel() {
   return (
-    <Carousel>
+    <Carousel className='large-carousel'>
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"

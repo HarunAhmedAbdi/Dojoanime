@@ -13,12 +13,12 @@ body {
   background-size: cover;
   font: 14px/20px "Lato", Arial, sans-serif;
   color: #9E9E9E;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .slide-container {
   margin: auto;
-  width: 600px;
+  width: auto;
   text-align: center;
 }
 
@@ -34,14 +34,13 @@ body {
 
 .clash-card {
   background: white;
-  width: 300px;
+  width: 230px;
   display: inline-block;
   margin: auto;
   border-radius: $border-radius-size + 5;
   position: relative;
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
-  z-index: 9999;
 }
 
 .clash-card__image {
@@ -55,10 +54,10 @@ body {
 .clash-card__image--barbarian {
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
   img {
-    width: 400px;
-    position: absolute;    
+    width: 200px;
+    position: initial;    
     top: -65px;
-    left: -70px;
+    left: 0px;
   }
 }
 
